@@ -1,0 +1,21 @@
+@baseUrl = http://127.0.0.1:8000
+
+### 1. Clasificación por categoría
+GET {{baseUrl}}/api/reportes/clasificacion-top
+Accept: application/json
+
+### 2. Clientes destacados
+GET {{baseUrl}}/api/analitica/actores-estrella
+Accept: application/json
+
+### 3. Productos con ventas por debajo del promedio de su categoría
+GET {{baseUrl}}/api/items/desviacion-grupo
+Accept: application/json
+
+### 4. Resumen por cargo, excluyendo pedidos cancelados
+GET {{baseUrl}}/api/segmentos/analisis-limpio
+Accept: application/json
+
+### 5. Resumen por método de pago, con mínimo de 3 operaciones
+GET {{baseUrl}}/api/operaciones/resumen-dinamico?min_operaciones=3
+Accept: application/json
